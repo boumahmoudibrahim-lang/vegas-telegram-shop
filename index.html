@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VEGAS — Boutique</title>
+
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0b0c;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      padding: 25px 18px;
+    }
+
+    .logo {
+      font-size: 34px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      margin: 20px 0 5px;
+    }
+
+    .subtitle {
+      color: #c8a24a;
+      margin-bottom: 30px;
+    }
+
+    .product {
+      background: #171719;
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    .product h2 {
+      margin-top: 0;
+    }
+
+    .price {
+      color: #c8a24a;
+      font-size: 22px;
+      font-weight: bold;
+      margin: 15px;
+    }
+
+    button {
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      padding: 15px;
+      margin-top: 12px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .order {
+      background: #c8a24a;
+      color: #0b0b0c;
+    }
+
+    .test {
+      background: #29292c;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="logo">VEGAS</div>
+    <div class="subtitle">Luxury Without Limits</div>
+
+    <div class="product">
+      <h2>Produit test</h2>
+
+      <div class="price">22 800 DA</div>
+
+      <button class="order" onclick="commander()">
+        🛒 Commander maintenant
+      </button>
+
+      <button class="test" onclick="testTelegram()">
+        🔔 Tester Telegram
+      </button>
+    </div>
+
+  </div>
+
+  <script>
+    const tg = window.Telegram.WebApp;
+
+    tg.ready();
+    tg.expand();
+
+    function commander() {
+      tg.showAlert("Bienvenue chez VEGAS 🛍️");
+    }
+
+    function testTelegram() {
+      tg.showAlert("La connexion Telegram fonctionne ✅");
+    }
+  </script>
+
+</body>
+</html>
