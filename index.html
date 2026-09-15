@@ -79,12 +79,18 @@
   <div class="container">
 
     <div class="logo">VEGAS</div>
-    <div class="subtitle">Luxury Without Limits</div>
+
+    <div class="subtitle">
+      Luxury Without Limits
+    </div>
 
     <div class="product">
+
       <h2>Produit test</h2>
 
-      <div class="price">22 800 DA</div>
+      <div class="price">
+        22 800 DA
+      </div>
 
       <button class="order" onclick="commander()">
         🛒 Commander maintenant
@@ -93,23 +99,39 @@
       <button class="test" onclick="testTelegram()">
         🔔 Tester Telegram
       </button>
+
     </div>
 
   </div>
 
   <script>
+
     const tg = window.Telegram.WebApp;
 
     tg.ready();
     tg.expand();
 
     function commander() {
-      tg.showAlert("Bienvenue chez VEGAS 🛍️");
+
+      const message =
+        "Bonjour VEGAS 👋%0A%0A" +
+        "Je souhaite commander le Produit test.%0A" +
+        "💰 Prix : 22 800 DA";
+
+      window.open(
+        "https://wa.me/213795955074?text=" + message,
+        "_blank"
+      );
     }
 
     function testTelegram() {
-      tg.showAlert("La connexion Telegram fonctionne ✅");
+
+      tg.showAlert(
+        "La connexion Telegram fonctionne ✅"
+      );
+
     }
+
   </script>
 
 </body>
